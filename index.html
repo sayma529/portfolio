@@ -209,7 +209,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:1.4rem;back
         <div class="carousel"><div class="track" tabindex="0" aria-label="Inchworm robot photos and videos, scroll sideways"></div></div>
       </article>
 
-      <article class="entry" id="fyi" data-alt="Airbus FYI 2026" data-media="yt:YOUR_VIDEO_ID">
+      <article class="entry" id="fyi" data-alt="Airbus FYI 2026" data-media="yt:https://youtu.be/EmS1fehjkoE?si=yKxJUFBukugmUaUw">
         <span class="dot"></span>
         <div class="tags"><span>Team Skyrim</span><span>Round 2 qualifier</span><span>Aerospace structures</span></div>
         <h3>Airbus Fly Your Ideas 2026</h3>
@@ -219,7 +219,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:1.4rem;back
           <li>This work led to the AURIS manuscript that follows.</li>
         </ul>
         <a class="chip" href="#auris"><i class="fas fa-arrow-down"></i> See the AURIS paper</a>
-        <a class="chip" href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" rel="noopener"><i class="fas fa-play"></i> Watch on YouTube</a>
+        <a class="chip" href="https://www.youtube.com/watch?v=https://youtu.be/EmS1fehjkoE?si=yKxJUFBukugmUaUw" target="_blank" rel="noopener"><i class="fas fa-play"></i> Watch on YouTube</a>
         <div class="carousel"><div class="track" tabindex="0" aria-label="Airbus FYI 2026 photos and video, scroll sideways"></div></div>
       </article>
 
@@ -355,7 +355,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:1.4rem;back
 </div>
 
 <script>
-const DIR='images/',VID=/\.(mp4|webm|mov)$/i,reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const DIR='',VID=/\.(mp4|webm|mov)$/i,reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
 
 /* mobile menu + nav highlight */
 const mbtn=document.querySelector('.menu'),ul=document.getElementById('links');
@@ -372,7 +372,7 @@ document.querySelectorAll('[data-media]').forEach(el=>{
     const s=document.createElement('div');s.className='slide';
     if(f.startsWith('yt:')){
       const id=f.slice(3);
-      if(id==='YOUR_VIDEO_ID')s.innerHTML='<div class="ph"><span>Put your YouTube video ID in <b>data-media</b></span></div>';
+      if(id==='https://youtu.be/EmS1fehjkoE?si=yKxJUFBukugmUaUw')s.innerHTML='<div class="ph"><span>Put your YouTube video ID in <b>data-media</b></span></div>';
       else{const fr=document.createElement('iframe');fr.src='https://www.youtube-nocookie.com/embed/'+id;fr.title=el.dataset.alt+' video';fr.loading='lazy';fr.allow='encrypted-media; picture-in-picture';fr.allowFullscreen=true;s.appendChild(fr)}
       track.appendChild(s);return;
     }
