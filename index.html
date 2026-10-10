@@ -73,6 +73,15 @@ h2{font-size:1.8rem;margin:0 0 .5rem;letter-spacing:-.015em}
 .slide{flex:0 0 min(84%,540px);scroll-snap-align:start;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:var(--blush);border:1px solid var(--line);box-shadow:0 10px 24px -14px rgba(194,33,143,.45)}
 .slide img,.slide video{width:100%;height:100%;object-fit:cover;display:block}
 .slide img{cursor:zoom-in}
+.gal{display:flex;flex-wrap:wrap;gap:12px;margin-top:1.4rem}
+.gi{min-width:0;border-radius:14px;overflow:hidden;background:var(--blush);border:1px solid var(--line);box-shadow:0 10px 24px -14px rgba(194,33,143,.45)}
+.gi img,.gi video{width:100%;height:auto;display:block}
+.gi img{cursor:zoom-in}
+.gi.yt{aspect-ratio:16/9}
+.gi iframe{width:100%;height:100%;border:0;display:block}
+.gi:only-child{max-width:680px}
+.gi .ph{aspect-ratio:3/2;height:auto}
+.gi.yt .ph{aspect-ratio:auto;height:100%}
 .slide iframe{width:100%;height:100%;border:0;display:block}
 .ph{display:grid;place-items:center;height:100%;padding:1rem;text-align:center;font-size:.85rem;color:var(--fuchsia-d);background:repeating-linear-gradient(45deg,var(--blush),var(--blush) 12px,#fff3f8 12px,#fff3f8 24px)}
 .ctrl{display:flex;align-items:center;gap:.5rem;margin-top:.5rem}
@@ -155,8 +164,8 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:1.4rem;back
     </div>
     <div class="stats">
       <div><strong data-n="3">3</strong><span>publications</span></div>
-      <div><strong data-n="2">2</strong><span>international finals</span></div>
-      <div><strong data-n="1">1</strong><span>silver medal</span></div>
+      <div><strong data-n="1">1</strong><span>international final</span></div>
+      <div><strong data-n="2">2</strong><span>awards</span></div>
     </div>
   </div>
 </header>
@@ -164,7 +173,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:1.4rem;back
 <section id="projects">
   <div class="wrap">
     <h2>Projects</h2>
-    <p class="intro">Scroll down the timeline. In every project, swipe or drag sideways for more photos and videos, and click a photo to enlarge it.</p>
+    <p class="intro">Every photo and video is shown in full. Click a photo to enlarge it.</p>
 
     <div class="timeline">
       <div class="spine"><i></i></div>
@@ -181,7 +190,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:1.4rem;back
           <li>Managed FDM printing, metrology, BOMs and component sourcing for the physical prototypes.</li>
           <li>Co-authored the paper in <em>Robotics</em> (MDPI), <a href="https://doi.org/10.3390/robotics15070129" target="_blank" rel="noopener" style="color:var(--fuchsia)">DOI link</a>. The project won a silver medal at WICE and 4th place at GRIC.</li>
         </ul>
-        <div class="carousel"><div class="track" tabindex="0" aria-label="Flexipede photos and videos, scroll sideways"></div></div>
+        <div class="gal"></div>
       </article>
 
       <article class="entry" id="geckobot" data-alt="GeckoBot" data-media="geckobot_1.png,geckobot_2.jpeg,geckobot_3.png">
@@ -194,7 +203,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:1.4rem;back
           <li>Built CAD models and ANSYS stress-deformation simulations to optimize adhesion force distribution and flexibility.</li>
           <li>Fabricated multi-material FDM prototypes and led the experimental validation of climbing performance.</li>
         </ul>
-        <div class="carousel"><div class="track" tabindex="0" aria-label="GeckoBot photos, scroll sideways"></div></div>
+        <div class="gal"></div>
       </article>
 
       <article class="entry" id="inchworm" data-alt="Inchworm robot" data-media="inchworm_1.png,inchworm_2.png">
@@ -206,7 +215,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:1.4rem;back
           <li>Uses compliant origami structures and proprioceptive terrain awareness.</li>
           <li>Focus on underactuated dynamic structures, kinematic deformation under geometric constraints and soft sensor integration.</li>
         </ul>
-        <div class="carousel"><div class="track" tabindex="0" aria-label="Inchworm robot photos and videos, scroll sideways"></div></div>
+        <div class="gal"></div>
       </article>
 
       <article class="entry" id="fyi" data-alt="Airbus FYI 2026" data-media="yt:EmS1fehjkoE">
@@ -219,8 +228,8 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:1.4rem;back
           <li>This work led to the AURIS manuscript that follows.</li>
         </ul>
         <a class="chip" href="#auris"><i class="fas fa-arrow-down"></i> See the AURIS paper</a>
-        <a class="chip" href="https://youtu.be/EmS1fehjkoE" target="_blank" rel="noopener">
-        <div class="carousel"><div class="track" tabindex="0" aria-label="Airbus FYI 2026 photos and video, scroll sideways"></div></div>
+        <a class="chip" href="https://youtu.be/EmS1fehjkoE" target="_blank" rel="noopener"><i class="fas fa-play"></i> Watch on YouTube</a>
+        <div class="gal"></div>
       </article>
 
       <article class="entry" id="auris">
@@ -232,7 +241,6 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:1.4rem;back
           <li>Manuscript submitted for journal publication in 2026 and currently under review.</li>
           <li>It grew out of the Airbus Fly Your Ideas 2026 project.</li>
         </ul>
-        <a class="chip" href="#fyi"><i class="fas fa-arrow-up"></i> From Airbus FYI 2026</a>
       </article>
 
       <article class="entry" id="technyx" data-alt="Technyx CAD" data-media="technyx_1.png,technyx_2.png,technyx_3.png">
@@ -243,7 +251,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:1.4rem;back
           <li>Product designer at Technyx (April 2025).</li>
           <li>Built high-fidelity parametric 3D CAD models, assembly renders and structural geometry in Fusion 360 for industrial applications.</li>
         </ul>
-        <div class="carousel"><div class="track" tabindex="0" aria-label="Technyx CAD renders, scroll sideways"></div></div>
+        <div class="gal"></div>
       </article>
 
       <article class="entry" id="thumb" data-alt="Wrist-thumb flexure" data-media="thumb_wrist_1.png,thumb_wrist_2.jpg,thumb_wrist_3.png">
@@ -253,7 +261,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:1.4rem;back
         <ul>
           <li>Designed, simulated and 3D printed a flexible, bio-compliant wrist splint for custom orthopedic stabilization (2024).</li>
         </ul>
-        <div class="carousel"><div class="track" tabindex="0" aria-label="Wrist-thumb flexure photos and video, scroll sideways"></div></div>
+        <div class="gal"></div>
       </article>
 
     </div>
@@ -318,8 +326,8 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:1.4rem;back
 
 <section id="awards" style="padding-top:0">
   <div class="wrap">
-    <h2>Awards</h2>
-    <p class="intro">Recognition and achievements. Swipe sideways for more.</p>
+    <h2>Awards and achievements</h2>
+    <p class="intro">Recognition and achievements.</p>
     <div class="carousel">
       <div class="track" tabindex="0" aria-label="Awards, scroll sideways">
         <div class="slide award"><i class="fas fa-medal"></i><h4>Silver medal</h4><p>World Invention Competition &amp; Exhibition (WICE). Flexipede project, selected for the international finals in Malaysia.</p></div>
@@ -338,7 +346,8 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:1.4rem;back
       <a class="btn fill" href="CV_Sayma_Islam.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Download CV</a>
       <a class="btn line" href="mailto:saymaislam529@gmail.com"><i class="fas fa-envelope"></i> Email</a>
       <a class="btn line" href="https://github.com/sayma529" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
-      <a class="btn line" href="www.linkedin.com/in/sayma-islam-sss1009786887s" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <!-- TODO: replace with your real profile URLs -->
+      <a class="btn line" href="https://www.linkedin.com/in/sayma-islam-sss1009786887s" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
       <a class="btn line" href="https://scholar.google.com/citations?user=zkYuDsgAAAAJ" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
     </div>
   </div>
@@ -364,24 +373,27 @@ const nl=[...ul.querySelectorAll('a:not(.btn)')];
 const nio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)nl.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-40% 0px -55% 0px'});
 document.querySelectorAll('#projects,#labs,#skills,#awards').forEach(s=>nio.observe(s));
 
-/* build slides from data-media */
+/* galleries: every photo and video is visible at once and shown uncropped */
+const BASE=230;
+const fit=(s,r)=>{s.style.flex=r+' 1 '+Math.round(r*BASE)+'px'};
 document.querySelectorAll('[data-media]').forEach(el=>{
-  const track=el.querySelector('.track');
-  el.dataset.media.split(',').map(s=>s.trim()).filter(Boolean).forEach(f=>{
-    const s=document.createElement('div');s.className='slide';
+  const gal=el.querySelector('.gal');
+  el.dataset.media.split(',').map(x=>x.trim()).filter(Boolean).forEach(f=>{
+    const s=document.createElement('div');s.className='gi';fit(s,1.5);
     if(f.startsWith('yt:')){
-      const id=f.slice(3);
-      if(id==='https://youtu.be/EmS1fehjkoE?si=yKxJUFBukugmUaUw')s.innerHTML='<div class="ph"><span>Put your YouTube video ID in <b>data-media</b></span></div>';
+      const id=f.slice(3);fit(s,16/9);s.classList.add('yt');
+      if(id==='YOUR_VIDEO_ID')s.innerHTML='<div class="ph"><span>Put your YouTube video ID in <b>data-media</b></span></div>';
       else{const fr=document.createElement('iframe');fr.src='https://www.youtube-nocookie.com/embed/'+id;fr.title=el.dataset.alt+' video';fr.loading='lazy';fr.allow='encrypted-media; picture-in-picture';fr.allowFullscreen=true;s.appendChild(fr)}
-      track.appendChild(s);return;
+      gal.appendChild(s);return;
     }
     const isV=VID.test(f),m=document.createElement(isV?'video':'img');
     m.src=DIR+f;
-    if(isV){m.controls=true;m.muted=true;m.loop=true;m.playsInline=true;m.preload='metadata'}
-    else{m.alt=el.dataset.alt+' ('+f+')';m.loading='lazy'}
-    m.addEventListener('error',()=>{s.innerHTML='<div class="ph"><span>Add <b>'+DIR+f+'</b></span></div>'});
-    s.appendChild(m);track.appendChild(s);
+    if(isV){m.controls=true;m.muted=true;m.loop=true;m.playsInline=true;m.preload='metadata';m.addEventListener('loadedmetadata',()=>{if(m.videoWidth)fit(s,m.videoWidth/m.videoHeight)})}
+    else{m.alt=el.dataset.alt+' ('+f+')';m.loading='lazy';m.addEventListener('load',()=>{if(m.naturalHeight)fit(s,m.naturalWidth/m.naturalHeight)})}
+    m.addEventListener('error',()=>{s.classList.remove('yt');s.innerHTML='<div class="ph"><span>Add <b>'+DIR+f+'</b></span></div>'});
+    s.appendChild(m);gal.appendChild(s);
   });
+  gal.addEventListener('click',e=>{const im=e.target.closest('img');if(im)openLB(gal,im)});
 });
 
 /* autoplay videos only while visible */
@@ -392,7 +404,7 @@ document.querySelectorAll('video').forEach(v=>vio.observe(v));
 const lb=document.getElementById('lb'),lbi=lb.querySelector('img');let imgs=[],idx=0;
 const showLB=()=>{lbi.src=imgs[idx].src;lbi.alt=imgs[idx].alt};
 const goLB=d=>{idx=(idx+d+imgs.length)%imgs.length;showLB()};
-const openLB=(c,im)=>{imgs=[...c.querySelectorAll('.track img')];idx=imgs.indexOf(im);showLB();lb.classList.add('open');lb.querySelector('.lb-x').focus()};
+const openLB=(c,im)=>{imgs=[...c.querySelectorAll('img')];idx=imgs.indexOf(im);showLB();lb.classList.add('open');lb.querySelector('.lb-x').focus()};
 lb.onclick=e=>{if(e.target===lb||e.target.closest('.lb-x'))lb.classList.remove('open');else if(e.target.closest('.lb-p'))goLB(-1);else if(e.target.closest('.lb-n'))goLB(1)};
 addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')lb.classList.remove('open');if(e.key==='ArrowLeft')goLB(-1);if(e.key==='ArrowRight')goLB(1)});
 
